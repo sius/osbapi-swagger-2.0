@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gen:server:nodejs-server": "swagger-codegen-cli generate -c .project_setup/config/nodejs-server.json -i api/swagger.yaml  -l nodejs-server -o .project_setup/generated/server-nodejs",
-    "gen:server:spring-boot": "swagger-codegen-cli generate -c .project_setup/config/spring-boot.json -i api/swagger.yaml  -l spring -o .project_setup/generated/spring-boot",
+    "gen:server:nodejs-server": "swagger-codegen-cli generate -c .project_setup/config/nodejs-server.json -i api/swagger.yaml  -l nodejs-server -o .project_setup/generated/server/nodejs-server",
+    "gen:server:spring-boot": "swagger-codegen-cli generate -c .project_setup/config/spring-boot.json -i api/swagger.yaml  -l spring -o .project_setup/generated/server/spring-boot",
     "gen:all": "npm run gen:server:nodejs-server && npm run gen:server:spring-boot",
-    "setup": "rimraf .project_setup/generated  && mkdir .project_setup/generated && npm run gen:all",
-    "editor": "node .project_setup/scripts/editor"
+    "setup": "rimraf .project_setup/generated  && mkdir .project_setup/generated && npm run gen:all && npm run post_setup",
+    "post_setup": "cd .project_setup/generated/server/nodejs-server && npm install",
+    "editor": "node .project_setup/scripts/editor",
+    "start": "node .project_setup/generated/server/nodejs-server"
   },
   "author": "sius",
   "license": "ISC",
