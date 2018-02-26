@@ -1,7 +1,7 @@
 {
   "name": "osbapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Open Service Broker API for Swagger 2.0",
   "main": "index.js",
   "scripts": {
     "gen:server:nodejs-server": "swagger-codegen-cli generate -c .project_setup/config/nodejs-server.json -i api/swagger.yaml  -l nodejs-server -o .project_setup/generated/server/nodejs-server",
@@ -13,7 +13,7 @@
     "start": "node .project_setup/generated/server/nodejs-server"
   },
   "author": "sius",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "devDependencies": {
     "express": "^4.16.2",
     "global-npm": "^0.3.0",
