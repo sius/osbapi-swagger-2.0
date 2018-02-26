@@ -1,0 +1,17 @@
+{
+  "modelPackage": "my.servicebroker.sample.model",
+  "apiPackage": "my.servicebroker.sample.api",
+  "invokerPackage": "my.servicebroker.sample",
+  "groupId": "my.servicebroker",
+  "artifactId": "my.servicebroker.sample",
+  "artifactVersion": "1.0",
+  "artifactDescription": "Open Service Broker API Sample",
+  "licenseName": "Apache-2.0",
+  "bigDecimalAsString": true,
+  "java8": false,
+  "title": "Open Service Broker API",
+  "configPackage": "my.servicebroker.sample.config",
+  "basePackage": "my.servicebroker.sample",
+  "swaggerDocketConfig": true,
+  "library": "spring-boot"
+}
